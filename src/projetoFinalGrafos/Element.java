@@ -3,15 +3,19 @@ package projetoFinalGrafos;
 import java.util.List;
 
 public class Element {
-	public String name;
-	private List<String> states;
+	public Integer id;
+	private List<Double> atributos;
 	
-	public Element(String n, List<String> s){
-		name = n;
-		states = s;
+	public Element(Integer id, List<Double> atributos){
+		this.id = id;
+		this.atributos = atributos;
 	}
 	
-	public String GetState(int number){
-		return states.get(number);
+	public Double GetAtributos(Integer number){
+		return atributos.get(number);
+	}
+	
+	public Integer GetNumberAtributos(){
+		return atributos.size();
 	}
 }
